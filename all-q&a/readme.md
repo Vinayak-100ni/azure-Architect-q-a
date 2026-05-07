@@ -24,6 +24,20 @@ So teams can start deploying quickly while remaining compliant with enterprise g
 ```
 
 How do you design enterprise-scale landing zones?
+```
+I design enterprise-scale Azure landing zones by creating a secure, scalable, and standardized foundation for all teams and applications.
+First, I organize the environment using Management Groups and separate subscriptions for production, non-production, and shared services.
+Then I implement:
+Centralized identity management using Microsoft Entra ID
+Hub-and-spoke networking for secure connectivity
+Azure Policies for governance and compliance
+RBAC for controlled access
+Centralized monitoring and logging
+Standard tagging for cost management and ownership
+
+I also use Infrastructure as Code like Bicep and Azure DevOps pipelines so the landing zone can be deployed consistently and automatically.
+The main goal is to provide teams with a ready-to-use Azure environment that is secure, compliant, and easy to scale across the organization.
+```
 
 Difference between subscription, management group, and tenant?
 
