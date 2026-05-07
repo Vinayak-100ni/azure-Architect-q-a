@@ -1,4 +1,4 @@
-<img width="5076" height="3024" alt="azure-landing-zone-architecture-diagram-hub-spoke" src="https://github.com/user-attachments/assets/c5bb4dc3-be14-4494-a45a-abdd9f06fe48" />
+<img width="7076" height="5024" alt="azure-landing-zone-architecture-diagram-hub-spoke" src="https://github.com/user-attachments/assets/c5bb4dc3-be14-4494-a45a-abdd9f06fe48" />
 
 ### 1. Azure Landing Zone Questions
    
