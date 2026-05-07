@@ -40,15 +40,130 @@ The main goal is to provide teams with a ready-to-use Azure environment that is 
 ```
 
 Difference between subscription, management group, and tenant?
+```
+You can explain it like this in a simple interview-friendly way:
+Tenant is the top-level Azure identity environment.
+It represents the organization and contains users, groups, applications, and Microsoft Entra ID.
+Management Group is used to organize multiple subscriptions together.
+It helps apply governance, policies, and access controls across many subscriptions centrally.
+Subscription is where actual Azure resources are created and billed.
+It acts as a logical container for resources like VMs, AKS, databases, and storage accounts.
+
+Simple hierarchy:
+Tenant
+   └── Management Groups
+           └── Subscriptions
+                   └── Resources
+
+Example:
+Tenant = Entire company
+Management Group = Production / Non-Production / Business Units
+Subscription = Individual projects or applications
+So:
+Tenant manages identity
+Management Group manages governance
+Subscription manages resources and billing
+```
 
 How do you structure management groups?
+```
+I structure Management Groups based on organization, environment, and governance requirements so policies and access can be managed centrally.
+
+Usually, I create a hierarchy like this:
+
+Tenant Root
+   ├── Platform
+   │      ├── Shared Services
+   │      └── Connectivity
+   │
+   ├── Production
+   │      ├── Business Unit A
+   │      └── Business Unit B
+   │
+   └── Non-Production
+          ├── Dev
+          ├── Test
+          └── Sandbox
+
+Then I apply:
+
+Security policies at higher levels
+Environment-specific controls at lower levels
+RBAC based on team ownership
+Budget and compliance policies per business unit
+
+This approach helps maintain:
+
+Central governance
+Security consistency
+Easy scaling
+Better cost management
+Clear separation between production and non-production workloads.
+```
 
 How do you separate prod/non-prod?
+```
+I separate production and non-production environments using separate subscriptions and management groups to improve security, governance, and cost control.
+
+For example:
+
+Management Group
+   ├── Production Subscriptions
+   └── Non-Production Subscriptions
+
+Then I apply:
+
+Stricter security and policies for production
+Different RBAC access levels
+Separate VNets and resources
+Different monitoring and backup rules
+Separate budgets and cost tracking
+
+Non-production environments like Dev and Test usually allow more flexibility, while production is tightly controlled with approval processes and stricter compliance.
+
+This separation reduces risk and prevents development activities from impacting live production workloads.
+```
 
 How do you enforce governance across subscriptions?
+```
+I enforce governance across subscriptions mainly using Management Groups, Azure Policy, RBAC, and standardized deployment processes.
+
+First, I organize subscriptions under Management Groups so governance can be applied centrally.
+
+Then I use Azure Policy to enforce standards such as:
+
+Mandatory tagging
+Allowed Azure regions
+Approved VM sizes
+Denying public IPs
+Enabling diagnostic logs
+
+I also use RBAC to control who can create or modify resources.
+
+For consistency, all infrastructure is deployed using Bicep and Azure DevOps pipelines, so teams follow approved deployment patterns instead of creating resources manually.
+
+This helps maintain security, compliance, cost control, and operational consistency across all subscriptions.
+```
 
 How do you onboard new applications securely?
+```
+I onboard new applications securely by using standardized landing zones, automated deployments, and predefined security controls.
 
+First, the application is deployed into the correct subscription and network based on the environment such as Dev, Test, or Production.
+
+Then I apply:
+
+RBAC for controlled access
+Azure Policies for compliance
+Private networking and NSGs
+Managed identities instead of hardcoded secrets
+Key Vault for secret management
+Centralized logging and monitoring
+
+All infrastructure is deployed using Bicep and Azure DevOps pipelines so configurations remain consistent and secure.
+
+Before production deployment, security and compliance checks are validated to ensure the application follows enterprise standards.
+```
 
 ### 2. Azure Governance Questions
 
