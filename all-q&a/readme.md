@@ -2,7 +2,26 @@
    
 Questions
 
-What is an Azure Landing Zone?
+### What is an Azure Landing Zone?
+```
+An Azure Landing Zone is a pre-configured Azure environment that provides a secure and standardized foundation for deploying applications and workloads.
+It includes:
+Identity and access management
+Networking setup
+Security policies
+Monitoring
+Governance rules
+Resource organization
+The goal is to help teams deploy resources in Azure consistently, securely, and according to company standards without setting everything up from scratch every time.
+For example, when a new project team wants to use Azure, the landing zone already provides:
+A subscription structure
+RBAC access
+VNet connectivity
+Security policies
+Logging and monitoring
+CI/CD standards
+So teams can start deploying quickly while remaining compliant with enterprise governance.
+```
 
 How do you design enterprise-scale landing zones?
 
