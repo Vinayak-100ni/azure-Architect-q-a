@@ -330,10 +330,52 @@ In simple terms:
 ```
 
 Difference between RBAC and Entra roles?
+```
+| RBAC Roles                                              | Entra ID Roles                                    |
+| ------------------------------------------------------- | ------------------------------------------------- |
+| Manage access to Azure resources                        | Manage access to Entra ID features                |
+| Applied to subscriptions, resource groups, or resources | Applied at Entra ID tenant level                  |
+| Controls actions on Azure resources                     | Controls identity and directory management        |
+| Example: Owner, Contributor, Reader                     | Example: Global Administrator, User Administrator |
+| Used for Azure resource authorization                   | Used for identity and user administration         |
+```
 
 How do you implement least privilege?
+```
+“To implement least privilege in Azure, I provide users only the minimum access required to perform their tasks.
+
+I achieve this by:
+
+* Using RBAC with appropriate built-in or custom roles,
+* Assigning permissions at the lowest required scope (resource, resource group, or subscription),
+* Avoiding excessive roles like Owner or Contributor unless necessary,
+* Using Privileged Identity Management (PIM) for just-in-time elevated access,
+* Regularly reviewing and removing unused permissions,
+* Using groups instead of assigning permissions directly to users.
+
+This approach improves security and reduces the risk of unauthorized access or accidental changes.”
+```
 
 What is PIM?
+```
+“PIM (Privileged Identity Management) is a feature in Microsoft Entra ID that helps manage, control, and monitor privileged access to Azure resources and Entra ID roles.
+
+It provides **Just-In-Time (JIT)** access, meaning users get elevated permissions only when needed and for a limited time.
+
+Key features:
+
+* Temporary role activation
+* Approval-based access
+* MFA enforcement
+* Access reviews
+* Audit and monitoring
+* Time-bound privileged access
+
+Example:
+A user is eligible for the Contributor role but activates it only for 1 hour when required.
+
+This helps implement the principle of least privilege and improves security.”
+```
 
 What is Conditional Access?
 
