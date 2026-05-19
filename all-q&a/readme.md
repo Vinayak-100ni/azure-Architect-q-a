@@ -181,10 +181,50 @@ Before production deployment, security and compliance checks are validated to en
 Question
 
 How do you enforce tagging standards?
+```
+“I enforce tagging standards in Azure mainly using Azure Policy.
+
+First, I define mandatory tags such as Environment, Owner, Cost Center, and Application Name. Then I apply Azure Policies at the Management Group or Subscription level to ensure all resources follow the standard.
+
+I use:
+
+* **Deny policies** to block resources without required tags,
+* **Inherit/Append policies** to auto-apply tags,
+* **Remediation tasks** to fix existing non-compliant resources.
+
+This helps with governance, cost tracking, compliance, and resource management across the organization.”
+```
 
 How do you prevent public IP creation?
+```
+“To prevent public IP creation in Azure, I use Azure Policy at the Management Group or Subscription level.
+
+I create a policy that denies the creation of Public IP resources or prevents NICs/VMs from associating with public IPs. This ensures workloads remain private and follow security standards.
+
+For existing environments, I also use:
+
+* NSGs and private networking,
+* Azure Firewall or Bastion for secure access,
+* Remediation tasks to identify and fix non-compliant resources.
+
+This approach helps enforce secure network governance across the organization.”
+```
 
 How do you restrict regions?
+```
+“To restrict regions in Azure, I use Azure Policy at the Management Group or Subscription level.
+
+I create a policy that allows resource deployment only in approved Azure regions, such as Central India or East US, and denies deployments in unauthorized regions.
+
+This helps with:
+
+* Compliance requirements
+* Data residency
+* Cost optimization
+* Governance standardization
+
+In enterprise environments, region restriction policies are usually implemented as part of the Azure Landing Zone governance model.”
+```
 
 What is Azure Policy?
 
