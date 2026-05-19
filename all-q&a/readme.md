@@ -310,6 +310,24 @@ How do you implement policy-as-code?
 Question
 
 What is Microsoft Entra ID?
+```
+“[Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/fundamentals/whatis?utm_source=chatgpt.com) (previously Azure Active Directory) is Microsoft’s cloud-based identity and access management service.
+
+It is used to:
+
+* Manage users and groups
+* Authenticate users
+* Provide Single Sign-On (SSO)
+* Control access to Azure resources and applications
+* Enable security features like MFA and Conditional Access
+
+In Azure, Entra ID works with RBAC to control who can access resources and what actions they can perform.
+
+In simple terms:
+
+> Microsoft Entra ID manages identities and access in Azure and Microsoft cloud services.”
+
+```
 
 Difference between RBAC and Entra roles?
 
