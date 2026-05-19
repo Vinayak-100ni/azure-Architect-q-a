@@ -311,7 +311,7 @@ Question
 
 What is Microsoft Entra ID?
 ```
-“[Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/fundamentals/whatis?utm_source=chatgpt.com) (previously Azure Active Directory) is Microsoft’s cloud-based identity and access management service.
+“Microsoft Entra ID is Microsoft’s cloud-based identity and access management service.
 
 It is used to:
 
