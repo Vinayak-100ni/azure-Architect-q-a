@@ -261,8 +261,46 @@ In short:
 ```
 
 Difference between Azure Policy and RBAC?
+```
+| Azure Policy                                              | RBAC (Role-Based Access Control)           |
+| --------------------------------------------------------- | ------------------------------------------ |
+| Used for governance and compliance                        | Used for access management                 |
+| Controls **what can be created/configured**               | Controls **who can access resources**      |
+| Enforces standards on resources                           | Assigns permissions to users/groups        |
+| Works on resource properties                              | Works on user roles and actions            |
+| Example: Restrict regions, enforce tags, block public IPs | Example: Contributor, Reader, Owner access |
+| Uses policy effects like Deny, Audit, Modify              | Uses built-in/custom roles                 |
+| Focuses on resource compliance                            | Focuses on authorization                   |
 
+```
 What are initiatives in Azure Policy?
+```
+“An Initiative in Azure Policy is a collection of multiple policies grouped together and managed as a single unit.
+
+It helps apply and manage governance standards more efficiently across Azure environments.
+
+For example, instead of assigning separate policies for:
+
+* Mandatory tags
+* Allowed regions
+* No public IPs
+* Approved VM SKUs
+
+we can group them into one Initiative called:
+
+text id="2qk0ec"
+Enterprise Governance Baseline
+
+Benefits of Initiatives:
+
+* Centralized policy management
+* Easier compliance tracking
+* Simplified assignments
+* Better governance at scale
+
+Initiatives are commonly used in Azure Landing Zones and enterprise environments to enforce organization-wide standards.”
+
+```
 
 How do you implement policy-as-code?
 
