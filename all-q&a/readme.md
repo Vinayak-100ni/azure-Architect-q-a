@@ -227,6 +227,38 @@ In enterprise environments, region restriction policies are usually implemented 
 ```
 
 What is Azure Policy?
+```
+“Azure Policy is a governance service in [Microsoft Azure](https://azure.microsoft.com/?utm_source=chatgpt.com) used to enforce organizational standards and compliance across Azure resources.
+
+It helps control how resources are created and configured by evaluating resources against defined rules.
+
+Using Azure Policy, we can:
+
+* Enforce tagging standards
+* Restrict Azure regions
+* Prevent public IP creation
+* Enforce specific VM SKUs
+* Ensure security and compliance requirements
+
+Policies can be assigned at:
+
+* Management Group
+* Subscription
+* Resource Group
+
+Common policy effects include:
+
+* Deny
+* Audit
+* Append
+* Modify
+* DeployIfNotExists
+
+In short:
+
+> Azure Policy helps automate governance and compliance in Azure environments.”
+
+```
 
 Difference between Azure Policy and RBAC?
 
