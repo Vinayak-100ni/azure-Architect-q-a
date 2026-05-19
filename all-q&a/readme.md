@@ -1,3 +1,11 @@
+```
+| Component        | Purpose                | Example              |
+| ---------------- | ---------------------- | -------------------- |
+| Entra ID         | Identity & access      | Users, groups, login |
+| Management Group | Organize subscriptions | Prod / Dev hierarchy |
+| Subscription     | Billing & resources    | VM, Storage, AKS     |
+```
+
 <img width="1636" height="922" alt="image" src="https://github.com/user-attachments/assets/a6a6fe38-9846-4e1b-abbb-41874cf33df6" />
 
 
